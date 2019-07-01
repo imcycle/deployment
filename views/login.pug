@@ -1,17 +1,16 @@
 extends layout
 
-//- block scrpits
-//-   scrpit(type="text/javascript", src='/javascripts/login.js')
+block scripts
+  script(src='/javascripts/login.js')
 
 block content
-  input(placeholder='请输入账号')
+  input(id='username', placeholder='请输入账号')
   br
   br
-  input(placeholder='请输入密码', password='{{true}}')
+  input(id='password', placeholder='请输入密码', password='{{true}}')
   br
   br
-  button(onclick='alert(1)')='登录'
-  button(onclick='login()')='读取'
+  button(onclick='login()')='登录'
 
   
   
