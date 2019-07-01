@@ -8,8 +8,6 @@ var apiLoginRouter = require('./routes/api/login');
 var apiPublishRouter = require('./routes/api/publish');
 var loginRouter = require('./routes/login');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var shRouter = require('./routes/sh');
 
 var app = express();
 
@@ -28,8 +26,6 @@ app.use('/api/login', apiLoginRouter);
 app.use('/api/publish', apiPublishRouter);
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/sh', shRouter);
 
 
 // catch 404 and forward to error handler
