@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var apiLoginRouter = require('./routes/api/login');
+var apiProfileRouter = require('./routes/api/profile');
 var apiPublishRouter = require('./routes/api/publish');
 var loginRouter = require('./routes/login');
 var indexRouter = require('./routes/index');
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/api/login', apiLoginRouter);
+app.use('/api/profile', apiProfileRouter);
 app.use('/api/publish', apiPublishRouter);
 app.use('/login', loginRouter);
 app.use('/', indexRouter);

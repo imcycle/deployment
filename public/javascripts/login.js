@@ -19,7 +19,10 @@ const login = () => {
     })
     .then(res => {
       if (res.code === 0) {
+        localStorage.WM_token = res.data;
         window.location.pathname = '/';
+      } else {
+        alert(res.message);
       }
     })
 }

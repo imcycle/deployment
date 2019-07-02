@@ -4,6 +4,13 @@ block scripts
   script(src='/javascripts/index.js')
 
 block content
-  h1= title
-  p Welcome to #{title}
-  button(onclick='handlePublishClick()')='部署'
+  h1= 'whosmeya'
+  p user-agent: #{userAgent}
+  p time: #{time}
+  if projectList
+    ul
+      each val in projectList
+        li
+          span(style='margin-right: 10px;')= '项目名称: ' + val.name
+          span(style='margin-right: 10px;') 当前状态: #{val.status}
+          button(onclick=`handlePublishClick(${val.id})`) 部署
