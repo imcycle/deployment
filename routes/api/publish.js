@@ -22,7 +22,6 @@ router.post('/', function (req, res, next) {
           });
 
           syncFile.stderr.on('data', (data) => {
-            projectStatusServices.updateById({ ...params, status: '失败' })
             console.log(`stderr:${data}`)
           })
 
