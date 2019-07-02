@@ -32,7 +32,7 @@ const handlePublishClick = (id) => {
     })
     .then(res => {
       if (res.code === 0) {
-        alert('ok');
+
       } else if (res.code === 401) {
         window.location.pathname = '/login';
       } else {

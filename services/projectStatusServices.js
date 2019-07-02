@@ -1,6 +1,5 @@
 var fs = require('fs');
 
-
 const insert = () => {
 
 }
@@ -21,10 +20,10 @@ const query = (project, callback) => {
     if (!project) {  // queryAll
       callback(null, projectList);
     } else {  // queryByParams
-      let newList = projectList.filter(d => {
+      let newList = projectList.filter(item => {
         let pass = true;
-        Object.keys(projectList).forEach(d1 => {
-          if (project[d1] !== d[d1]) pass = false;
+        Object.keys(project).forEach(key => {
+          if (project[key] !== item[key]) pass = false;
         })
         return pass;
       })
