@@ -1,22 +1,45 @@
 var fs = require('fs');
 
+const filePath = './public/data/project.json';
+
+
 const insert = () => {
 
 }
 
-const updateById = () => {
-
+const updateById = (project) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filePath, (err, projectListBuffer) => {
+      if (err) reject(err)
+      else resolve(projectListBuffer)
+    })
+  })
+    .then(res => {
+      let dataList = JSON.parse(res.toString());
+      dataList.forEach(d => {
+        if (d.id === project.id) {
+          Object.assign(d, project);
+        }
+      })
+      return dataList;
+    })
+    .then(res => {
+      return new Promise((resolve, reject) => {
+        fs.writeFile(filePath, Buffer(JSON.stringify(res)), (err) => {
+          if (err) reject(err)
+          else resolve()
+        })
+      })
+    })
 }
 
 const query = (project, callback) => {
-  fs.readFile('./public/data/project.json', (err, projectListBuffer) => {
+  fs.readFile(filePath, (err, projectListBuffer) => {
     if (err) {
       callback(err, null);
       return;
     }
-
     const projectList = JSON.parse(projectListBuffer.toString());
-
     if (!project) {  // queryAll
       callback(null, projectList);
     } else {  // queryByParams
