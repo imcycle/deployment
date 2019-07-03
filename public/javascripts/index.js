@@ -10,6 +10,7 @@ window.onload = function () {
     })
     .then(res => {
       if (res.code === 0) {
+        document.getElementById('title').innerHTML = res.data.username;
         localStorage.WM_profile = JSON.stringify(res.data);
       } else if (res.code === 401) {
         window.location.pathname = '/login';

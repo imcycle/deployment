@@ -7,38 +7,36 @@ var projectStatusServices = require('../../services/projectStatusServices');
 
 /* POST publish listing. */
 router.post('/', function (req, res, next) {
-  tokenUtils.getProfile(req, res, (err, data) => {
-    if (err) return;
-    let params = {
-      id: req.body.id,
-    }
+  let params = {
+    id: req.body.id,
+  }
+  tokenUtils.getProfile(req, res)
+    .then(profile => {
+      res.send(responseUtils.success());
+      return Promise.all([
+        projectStatusServices.query(params),
+        projectStatusServices.updateById({ ...params, status: '进行中' }),
+      ])
+    })
+    .then(([projectList, success]) => {
+      let syncFile = spawn('sh', [`./public/shell/${projectList[0].shellName}`]);
 
-    Promise.all([
-      projectStatusServices.query(params),
-      projectStatusServices.updateById({ ...params, status: '进行中' }),
-    ])
-      .then(([projectList, success]) => {
-        let syncFile = spawn('sh', [`./public/shell/${projectList[0].shellName}`]);
+      syncFile.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+      });
 
-        syncFile.stdout.on('data', (data) => {
-          console.log(`stdout: ${data}`);
-        });
-
-        syncFile.stderr.on('data', (data) => {
-          console.log(`stderr:${data}`)
-        })
-
-        syncFile.on('close', (code) => {
-          projectStatusServices.updateById({ ...params, status: '完成' })
-          console.log(`子进程退出码：${code}`)
-        })
-      })
-      .catch(err => {
-        res.send(responseUtils.fail(SERVER_ERROR, err));
+      syncFile.stderr.on('data', (data) => {
+        console.log(`stderr:${data}`)
       })
 
-    res.send(responseUtils.success());
-  })
+      syncFile.on('close', (code) => {
+        projectStatusServices.updateById({ ...params, status: '完成' })
+        console.log(`子进程退出码：${code}`)
+      })
+    })
+    .catch(err => {
+      res.send(responseUtils.fail(SERVER_ERROR, err));
+    })
 
 })
 
