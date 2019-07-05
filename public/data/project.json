@@ -1,1 +1,14 @@
-[{"id":1,"name":"博客","status":"完成","shellName":"blog_react_ts.sh"},{"id":2,"name":"test","status":"完成","shellName":"test.sh"}]
+[
+  {
+    "id": 1,
+    "name": "官网",
+    "status": "完成",
+    "shellName": "whosmeya-landing-page.sh"
+  },
+  {
+    "id": 2,
+    "name": "博客",
+    "status": "完成",
+    "shellName": "blog_react_ts.sh"
+  }
+]
