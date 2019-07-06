@@ -10,5 +10,11 @@
     "name": "博客",
     "status": "完成",
     "shellName": "blog_react_ts.sh"
+  },
+  {
+    "id": 3,
+    "name": "vue-cnode",
+    "status": "完成",
+    "shellName": "vue-cnode.sh"
   }
 ]
