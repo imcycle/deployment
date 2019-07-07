@@ -2,6 +2,7 @@
 echo '--build start--'
 cd /root/code/vue-cnode
 git checkout master
+git checkout .
 git pull
 npm install
 npm run build
