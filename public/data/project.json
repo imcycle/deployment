@@ -16,5 +16,11 @@
     "name": "vue-cnode",
     "status": "完成",
     "shellName": "vue-cnode.sh"
+  },
+  {
+    "id": 4,
+    "name": "angular-cnode",
+    "status": "完成",
+    "shellName": "angular-cnode.sh"
   }
 ]

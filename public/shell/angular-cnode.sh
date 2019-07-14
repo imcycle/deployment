@@ -1,11 +1,11 @@
 #!/bin/sh
 echo '--build start--'
-cd /root/code/vue-cnode
+cd /root/code/angular-cnode
 git checkout .
 git checkout master
 git pull
 npm install
 npm run build
-rm -rf /root/libs/vue-cnode/*
-mv /root/code/vue-cnode/dist/* /root/libs/vue-cnode
+rm -rf /root/libs/angular-cnode/*
+mv /root/code/angular-cnode/dist/* /root/libs/angular-cnode
 echo '--build end--'
