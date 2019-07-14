@@ -10,5 +10,5 @@ git pull
 # npm run build
 
 rm -rf /root/libs/angular-cnode/*
-mv /root/code/angular-cnode/dist/angular-cnode/* /root/libs/angular-cnode
+cp -rf /root/code/angular-cnode/dist/angular-cnode/* /root/libs/angular-cnode
 echo '--build end--'
