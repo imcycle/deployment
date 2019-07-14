@@ -7,5 +7,5 @@ git pull
 npm install
 npm run build
 rm -rf /root/libs/angular-cnode/*
-mv /root/code/angular-cnode/dist/* /root/libs/angular-cnode
+mv /root/code/angular-cnode/dist/angular-cnode/* /root/libs/angular-cnode
 echo '--build end--'
