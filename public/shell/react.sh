@@ -1,11 +1,11 @@
 #!/bin/sh
 echo '--build start--'
-cd /root/code/react
+cd /root/code/whosmeya-react
 git checkout .
 git checkout master
 git pull
 npm install
 npm run build
-rm -rf /root/libs/react/*
-mv /root/code/react/build/* /root/libs/react
+rm -rf /root/libs/whosmeya-react/*
+mv /root/code/whosmeya-react/build/* /root/libs/whosmeya-react
 echo '--build end--'
