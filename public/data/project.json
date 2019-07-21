@@ -22,5 +22,11 @@
     "name": "angular-cnode",
     "status": "完成",
     "shellName": "angular-cnode.sh"
+  },
+  {
+    "id": 5,
+    "name": "react",
+    "status": "完成",
+    "shellName": "react.sh"
   }
 ]
