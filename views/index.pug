@@ -8,9 +8,9 @@ block content
   p user-agent: #{userAgent}
   p time: #{time}
   if projectList
-    ul
+    ul(style='width: 450px;')
       each val in projectList
-        li
-          span(style='margin-right: 10px;')= '项目名称: ' + val.name
-          span(style='margin-right: 10px;') 当前状态: #{val.status}
+        li(style='margin-bottom: 10px; padding: 5px; border-bottom: 1px solid rgba(0, 0, 0, 0.15);')
+          span(style='display: inline-block; width: 200px; margin-right: 10px;')= '项目名称: ' + val.name
+          span(style='display: inline-block; width: 120px; margin-right: 10px;') 当前状态: #{val.status}
           button(onclick=`handlePublishClick(${val.id})`) 部署

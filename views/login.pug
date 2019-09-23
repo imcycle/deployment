@@ -4,10 +4,11 @@ block scripts
   script(src='/javascripts/login.js')
 
 block content
+  h3='账号密码登录'
   input(id='username', placeholder='请输入账号')
   br
   br
-  input(id='password', placeholder='请输入密码', password='{{true}}')
+  input(id='password', placeholder='请输入密码', type='password')
   br
   br
   button(onclick='login()')='登录'
