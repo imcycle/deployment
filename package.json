@@ -1,5 +1,5 @@
 {
-  "name": "whosmeya-deployment",
+  "name": "deployment",
   "version": "0.0.0",
   "private": true,
   "scripts": {
