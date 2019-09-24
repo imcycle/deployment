@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var apiGetokRouter = require('./routes/api/getok');
+var apiPostokRouter = require('./routes/api/postok');
 var apiLoginRouter = require('./routes/api/login');
 var apiProfileRouter = require('./routes/api/profile');
 var apiPublishRouter = require('./routes/api/publish');
@@ -23,6 +25,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+app.use('/api/getok', apiGetokRouter);
+app.use('/api/postok', apiPostokRouter);
 app.use('/api/login', apiLoginRouter);
 app.use('/api/profile', apiProfileRouter);
 app.use('/api/publish', apiPublishRouter);
