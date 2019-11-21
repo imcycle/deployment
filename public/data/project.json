@@ -34,5 +34,11 @@
     "name": "react",
     "status": "完成",
     "shellName": "react.sh"
+  },
+  {
+    "id": 7,
+    "name": "tool",
+    "status": "完成",
+    "shellName": "tool.sh"
   }
 ]
