@@ -40,5 +40,11 @@
     "name": "tool",
     "status": "完成",
     "shellName": "tool.sh"
+  },
+  {
+    "id": 8,
+    "name": "game",
+    "status": "完成",
+    "shellName": "game.sh"
   }
 ]
