@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "whosmeya",
+    "name": "whosmeya.com",
     "status": "完成",
-    "shellName": "whosmeya.sh"
+    "shellName": "whosmeya.come.sh"
   },
   {
     "id": 2,
-    "name": "官网",
+    "name": "whosmeya",
     "status": "完成",
-    "shellName": "landing-page.sh"
+    "shellName": "whosmeya.sh"
   },
   {
     "id": 3,
@@ -34,17 +34,5 @@
     "name": "react",
     "status": "完成",
     "shellName": "react.sh"
-  },
-  {
-    "id": 7,
-    "name": "tool",
-    "status": "完成",
-    "shellName": "tool.sh"
-  },
-  {
-    "id": 8,
-    "name": "game",
-    "status": "完成",
-    "shellName": "game.sh"
   }
 ]
