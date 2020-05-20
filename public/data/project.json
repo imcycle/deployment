@@ -1,38 +1,26 @@
 [
   {
     "id": 1,
-    "name": "whosmeya.com",
+    "name": "whosmeya.com(官网)",
     "status": "完成",
     "shellName": "whosmeya.com.sh"
   },
   {
     "id": 2,
-    "name": "whosmeya",
+    "name": "deployment(部署平台)",
     "status": "完成",
-    "shellName": "whosmeya.sh"
+    "shellName": "deployment.sh"
   },
   {
     "id": 3,
-    "name": "博客",
-    "status": "完成",
-    "shellName": "blog_react_ts.sh"
-  },
-  {
-    "id": 4,
     "name": "vue-cnode",
     "status": "完成",
     "shellName": "vue-cnode.sh"
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "angular-cnode",
     "status": "完成",
     "shellName": "angular-cnode.sh"
-  },
-  {
-    "id": 6,
-    "name": "react",
-    "status": "完成",
-    "shellName": "react.sh"
   }
 ]
