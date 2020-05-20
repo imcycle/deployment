@@ -4,13 +4,20 @@ block scripts
   script(src='/javascripts/index.js')
 
 block content
-  h1(id='title')
-  p user-agent: #{userAgent}
-  p time: #{time}
+  h1(id='title') default
+  p #{userAgent}
+  p #{time}
   if projectList
-    ul(style='width: 450px;')
-      each val in projectList
-        li(style='margin-bottom: 10px; padding: 5px; border-bottom: 1px solid rgba(0, 0, 0, 0.15);')
-          span(style='display: inline-block; width: 200px; margin-right: 10px;')= '项目名称: ' + val.name
-          span(style='display: inline-block; width: 120px; margin-right: 10px;') 当前状态: #{val.status}
-          button(onclick=`handlePublishClick(${val.id})`) 部署
+    table(border="1" width='700' cellpadding='12')
+      thead(style='text-align: left;')
+        tr
+          th 项目名称
+          th 状态
+          th 操作
+      tbody
+        each val in projectList
+          tr
+            td #{val.name}
+            td #{val.status}
+            td 
+              button(onclick=`handlePublishClick(${val.id})`) 部署
