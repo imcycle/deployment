@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "whosmeya.com(官网)",
+    "name": "whosmeya.com",
     "status": "完成",
     "shellName": "whosmeya.com.sh"
   },
@@ -22,5 +22,17 @@
     "name": "angular-cnode",
     "status": "完成",
     "shellName": "angular-cnode.sh"
-  }
+  },
+  {
+    "id": 5,
+    "name": "icyc.cc",
+    "status": "完成",
+    "shellName": "icyc.cc.sh"
+  },
+  {
+    "id": 6,
+    "name": "api",
+    "status": "完成",
+    "shellName": "api.sh"
+  },
 ]
