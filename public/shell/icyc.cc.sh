@@ -5,7 +5,7 @@ git checkout .
 git checkout master
 git pull
 npm install
-npm run build:update
+npm run build:upload
 rm -rf /root/libs/icyc.cc/*
 cp /root/code/icyc.cc/dist/* /root/libs/icyc.cc
 echo '--build end--'
